@@ -19,6 +19,7 @@ public class NumberCell implements Cell {
         return true;
     }
 
+    @Override
     public CellSnapshot getSnapshot() {
         if (cellState.isOpened()) {
             return CellSnapshot.ofNumber(nearbyLandMineCount);

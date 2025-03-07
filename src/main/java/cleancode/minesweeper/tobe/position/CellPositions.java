@@ -28,18 +28,18 @@ public class CellPositions {
             }
         }
 
-        return CellPositions.of(cellPositions);
+        return of(cellPositions);
     }
 
     public List<CellPosition> extractRandomPositions(int count) {
-        ArrayList<CellPosition> cellPositions = new ArrayList<>(positions);
+        List<CellPosition> cellPositions = new ArrayList<>(positions);
 
         Collections.shuffle(cellPositions);
         return cellPositions.subList(0, count);
     }
 
     public List<CellPosition> subtract(List<CellPosition> positionListToSubtract) {
-        ArrayList<CellPosition> cellPositions = new ArrayList<>(positions);
+        List<CellPosition> cellPositions = new ArrayList<>(positions);
         CellPositions positionsToSubtract = CellPositions.of(positionListToSubtract);
 
         return cellPositions.stream()

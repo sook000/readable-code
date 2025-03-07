@@ -141,7 +141,7 @@ public class GameBoard {
         return (int) count;
     }
 
-    private static List<CellPosition> calculateSurroundedPosition(CellPosition cellPosition, int rowSize, int colSize) {
+    private List<CellPosition> calculateSurroundedPosition(CellPosition cellPosition, int rowSize, int colSize) {
         return RelativePosition.SURROUNDED_POSITIONS.stream()
                 .filter(cellPosition::canCalculatePositionBy)
                 .map(cellPosition::calculatePositionBy)

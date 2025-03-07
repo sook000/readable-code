@@ -13,6 +13,7 @@ public class EmptyCell implements Cell {
         return false;
     }
 
+    @Override
     public CellSnapshot getSnapshot() {
         if (cellState.isOpened()) {
             return CellSnapshot.ofEmpty();

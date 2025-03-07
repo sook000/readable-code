@@ -24,7 +24,7 @@ public enum CellSignProvider implements CellSignProvidable{
             return LAND_MINE_SIGN;
         }
     },
-    NUMBER((CellSnapshotStatus.NUMBER)) {
+    NUMBER(CellSnapshotStatus.NUMBER) {
         @Override
         public String provide(CellSnapshot cellSnapshot) {
             return String.valueOf(cellSnapshot.getNearbyLandMineCount());
